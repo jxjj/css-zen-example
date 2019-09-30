@@ -1,0 +1,59 @@
+/**
+* CSS ZEN GARDEN
+*
+* This is a starter stylesheet for CSS Zen Garden HTML.
+* You may find it easier to begin with this but you're
+* welcome to start from scratch if you prefer.
+*
+* Rules:
+* 1. No HTML modification is allowed.
+* 2. Your CSS must be valid and work in modern browser.
+* 3. You may add images in a separate folder and link them
+*   in your CSS. You may NOT put images in the HTML though (See rule 1).
+**/
+
+/**
+* WEB FONTS
+* If you use custom web fonts like Google fonts, put these first
+* using an @import.
+**/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300&display=swap");
+
+html,
+body {
+	margin: 0;
+}
+
+/**
+* BASE TYPOGRAPHY
+* The body is a good place to put typograpic defaults like your default
+* font-family, line-height (aka leading).
+*/
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+/**
+* HEADINGS
+* Often headings have a different font and a smaller line-height
+* than body copy.
+*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Roboto Slab", serif;
+}
+
+/**
+* LINKS
+*/
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: magenta;
+}

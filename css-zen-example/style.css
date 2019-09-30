@@ -1,0 +1,257 @@
+/**
+* CSS ZEN GARDEN
+*
+* Theme: Starting Composition
+* Author: James Johnson
+* License: MIT
+*
+* This is an example for Week 6 of the HTML/CSS course.
+**/
+
+/**
+* WEB FONTS
+* If you use custom web fonts like Google fonts, put these first
+* using an @import.
+**/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300&display=swap");
+
+/**
+* NORMALIZE
+* Next, we're just resetting some browser defaults that may get in the way
+* of us styling. For example, we reset any margin on the html element to 0.
+*/
+html,
+body {
+	margin: 0;
+}
+
+/**
+* BASE TYPOGRAPHY
+* The body is a good place to put typograpic defaults like your default
+* font-family, line-height (aka leading). By default, the base font-size
+* is 16px = 1rem. If you want a larger font-size across the whole website
+* you could set this here.
+*/
+body {
+	font-family: "Roboto", sans-serif;
+	line-height: 1.4; /* Never put units like px or em on line-height */
+	font-size: 16px; /* default is 16px, so we don't need this */
+}
+
+/**
+* HEADINGS
+* Often headings have a different font that
+*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Roboto Slab", serif;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+abbr {
+	font-variant: all-small-caps;
+	text-decoration: none;
+	border-bottom: 0.25em dotted #ccc;
+}
+
+/**
+* LINKS
+*/
+a {
+	color: blue;
+	box-shadow: inset 0 -0.5rem hsla(60, 100%, 50%, 0.9);
+	text-decoration: none;
+}
+
+a:hover {
+	transition: all ease-out 0.3s;
+	background: hsla(60, 100%, 50%, 0.9);
+	color: magenta;
+}
+
+/**
+* COMPONENTS
+* After we setup our base typography, we can start writing the CSS
+* for each component of our design system.
+*/
+
+/*********************************************
+* .intro
+* The top introductory section of the page, including the header
+**/
+.intro {
+	padding-bottom: 2rem;
+}
+
+.intro > header {
+	/* this is how you might link a background image */
+	background: url("img/bg-comp-notebook.jpg");
+	padding: 4rem;
+}
+
+/* Styles that are common to both the h1 and h2 within the intro section */
+.intro h1,
+.intro h2 {
+	margin: 0;
+	padding: 2rem;
+	border: 0.25rem solid #000;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.intro h1 {
+	font-size: 4rem;
+	background: #fff;
+	border-radius: 1rem 1rem 0 0;
+	padding: 1rem;
+	border-bottom: none;
+}
+
+/**
+* Here's an example of how you can even add content
+* before or after an HTML element with CSS.
+*/
+.intro h2:before {
+	content: "→";
+}
+.intro h2:after {
+	content: "←";
+}
+
+.intro h2 {
+	padding: 1rem;
+	background: #000;
+	border-radius: 0 0 1rem 1rem;
+	color: #fff;
+}
+
+.intro h2 abbr {
+	font-size: 1.25em;
+	font-variant: small-caps;
+}
+
+.intro > header {
+	padding: 4rem;
+	margin-bottom: 2rem;
+}
+
+.intro > .summary {
+	margin: 2rem;
+	font-style: italic;
+	color: #999;
+}
+
+.intro h1,
+.intro h2 {
+	max-width: 40rem;
+	margin: auto;
+}
+.intro .summary,
+.intro .preamble {
+	padding: 0 2rem;
+	max-width: 40rem;
+	margin: auto;
+}
+
+.intro .preamble {
+	font-size: 1.25rem;
+}
+.intro .preamble h3 {
+	text-align: center;
+	font-size: 2rem;
+}
+.intro .preamble h3:before {
+	content: "✧ ";
+}
+.intro .preamble h3:after {
+	content: " ✧";
+}
+
+/***********************************
+* .main
+* Main content section
+*/
+
+.main {
+	background: #eee;
+	padding: 2rem 0;
+}
+.main > div,
+.main > footer {
+	max-width: 40rem;
+	margin: auto;
+	padding: 0 2rem;
+}
+
+/* the heading of the first section in main */
+.main > div:first-child {
+	font-size: 1.25rem;
+}
+.main > div:first-child h3 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.main > div:first-child h3:before {
+	content: "☛ ";
+}
+
+.main > div:first-child h3:after {
+	content: " ☚";
+}
+
+/***********************************
+* .sidebar
+* Related content like links to other themes
+*/
+
+.sidebar {
+	background: #000;
+	padding: 2rem 0;
+	color: #999;
+	font-size: 0.75rem;
+}
+.sidebar h3 {
+	margin-top: 1em;
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+	font-size: 1rem;
+}
+.sidebar a {
+	color: #999;
+	box-shadow: none;
+}
+.sidebar a:hover {
+	background: none;
+	color: magenta;
+}
+.sidebar .wrapper {
+	padding: 0 2rem;
+	max-width: 40rem;
+	margin: auto;
+}
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+.sidebar li {
+	margin: 1rem 0;
+}
+
+.sidebar .design-name {
+	display: block;
+	color: #ccc;
+	font-size: 1rem;
+}
+.sidebar abbr {
+	border-bottom: 1px dotted #666;
+}
